@@ -2,7 +2,8 @@ set number
 set relativenumber
 set background=dark
 set laststatus=0
-
+set tabstop=4
+		
 "Key map
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -19,13 +20,19 @@ endif
 	Plug 'alvan/vim-closetag'
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'morhetz/gruvbox'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lua/popup.nvim'
 call plug#end()
 
 "Plugin setting
 "Theme
 syntax enable
-colorscheme gruvbox 
+colorscheme dracula 
 "NerdTree
 map <C-b> :NERDTreeToggle<CR> 
 map <C-i> :NERDTreeFind<CR> 
+lua << EOF
+		require'lspconfig'.clangd.setup{}
+		require'lspconfig'.pyright.setup{}
+EOF
+
