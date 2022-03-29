@@ -28,6 +28,7 @@ call plug#end()
 "Theme
 syntax enable
 colorscheme dracula 
+hi Normal guibg=NONE ctermbg=NONE
 "NerdTree
 map <C-b> :NERDTreeToggle<CR> 
 map <C-i> :NERDTreeFind<CR> 

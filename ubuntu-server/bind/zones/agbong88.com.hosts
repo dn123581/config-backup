@@ -1,0 +1,9 @@
+$TTL 3600
+agbong88.com.	IN	SOA	ubuntuserver.members.linode.com. mail.example.com. (
+			1648132029
+			3600
+			600
+			1209600
+			3600 )
+agbong88.com.	IN	NS	ubuntuserver.members.linode.com.
+agbong88.com.	IN	A	172.104.166.249
